@@ -1,0 +1,126 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-color: #1e1e1e;
+    --accent: #00ffd5;
+  }
+  body.light {
+    --bg-color: #ffffff;
+    --text-color: #121212;
+    --card-color: #f0f0f0;
+    --accent: #007acc;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: 0.3s ease;
+  }
+  .container {
+    text-align: center;
+  }
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  .countdown {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .box {
+    background: var(--card-color);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .box span {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .label {
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
+  .progress-circle {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid var(--accent);
+    clip-path: inset(0 0 50% 0);
+    z-index: -1;
+    opacity: 0.3;
+  }
+  .controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  button {
+    padding: 8px 16px;
+    background: var(--accent);
+    border: none;
+    color: #000;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  input, select {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 6px;
+    border: none;
+    width: 200px;
+  }
+
+
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.4rem;
+    }
+    .box {
+      width: 80px;
+      height: 100px;
+    }
+    .box span {
+      font-size: 1.5rem;
+    }
+    input, button {
+      width: 100%;
+      max-width: 250px;
+    }
+    .controls {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media (max-width: 480px) {
+    .box {
+      width: 70px;
+      height: 90px;
+    }
+    .box span {
+      font-size: 1.3rem;
+    }
+    .label {
+      font-size: 0.8rem;
+    }
+  }

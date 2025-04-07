@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Countdown Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="title" id="event-title">Countdown to: 🚀 Product Launch</div>
+    <div class="countdown">
+      <div class="box"><span id="days">00</span><div class="label">Days</div><div class="progress-circle"></div></div>
+      <div class="box"><span id="hours">00</span><div class="label">Hours</div><div class="progress-circle"></div></div>
+      <div class="box"><span id="minutes">00</span><div class="label">Minutes</div><div class="progress-circle"></div></div>
+      <div class="box"><span id="seconds">00</span><div class="label">Seconds</div><div class="progress-circle"></div></div>
+    </div>
+
+    <div class="controls">
+      <input type="text" id="inputTitle" placeholder="Enter event title" />
+      <input type="datetime-local" id="targetDate" />
+      <button onclick="updateCountdown()">Start Countdown</button>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
